@@ -1,0 +1,49 @@
+img {
+    max-width: 100%;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-rendering: optimizeSpeed;
+    text-rendering: optimizeSpeed;
+}
+
+body {
+    width: 100%;
+    font-size: 18px; // tuỳ thiết kế
+    font-family: arial; // tuỳ thiết kế
+    color: #000; // tuỳ thiết kế
+    background-color: #fff;
+
+    .container {
+        width: 100%;
+        max-width: 975px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+    }
+
+    .container-fluid {
+        width: 100%;
+        // max-width: 2560px;
+        padding-right: 30px;
+        padding-left: 30px;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+    }
+}
+@include lg {
+}
+
+@include md {
+}
+
+@include sm {
+}
+
+@include xs {
+}

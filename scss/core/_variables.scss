@@ -1,0 +1,35 @@
+// khai bao bien
+
+* {
+    --fs-h1: 60px;
+    --fs-h2: 40px;
+    --fs-h3: 18px;
+
+    --cl-tan: #b69f77;
+    --cl-hover-tan: #b7a482;
+    --cl-text: #bea67c;
+    --cl-grey: #303030;
+    --cl-grey-text: #464646;
+
+    --pd-top: 93px;
+    --pd-bottom: 78px;
+
+    --pd-top-about: 118px;
+    --pd-bot-about: 90px;
+
+    --pd-bot-quality: 112px;
+
+    --tran: 0.4s;
+}
+
+$xxs-min: 576px;
+$xs-min: 767px;
+$sm-min: 992px;
+$md-min: 1200px;
+$lg-min: 1600px;
+
+$xxs-max: ($xxs-min - 1);
+$xs-max: ($xs-min - 1);
+$sm-max: ($sm-min - 1);
+$md-max: ($md-min - 1);
+$lg-max: ($lg-min - 1);

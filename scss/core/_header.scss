@@ -1,0 +1,195 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 300;
+    transition: var(--tran);
+    &.active {
+        background: black;
+        transition: var(--tran);
+    }
+    .container-fluid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    &__logo {
+        width: 170px;
+    }
+    &__menu {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        li {
+            height: 100%;
+        }
+        a {
+            display: flex;
+            text-decoration: none;
+            color: white;
+            padding: 0 20px;
+            transition: 0.4s color;
+            font-family: pb;
+            font-size: 15px;
+            align-items: center;
+            height: 100%;
+        }
+    }
+    &__menu a:hover {
+        color: #ae9872;
+        &.active {
+            .header__menu a {
+                color: #ae9872;
+            }
+        }
+    }
+    .header__right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-lang {
+            position: relative;
+            height: 100%;
+            cursor: pointer;
+            &.active {
+                .header__lang-current {
+                    i {
+                        transform: (rotateX(180deg));
+                    }
+                }
+                .header__lang-select {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            .header__lang-current {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 1;
+                i {
+                    padding: 15px 0px 22px 0px;
+                    transform: (rotateX(0deg));
+                    transition: var(--tran);
+                }
+            }
+            span {
+                color: white;
+                font-family: pb;
+                font-size: 16px;
+                transition: var(--tran);
+                cursor: pointer;
+                padding: 30px 0px;
+            }
+            span:hover {
+                color: var(--cl-hover-tan);
+            }
+            .header__lang-select {
+                opacity: 0;
+                position: absolute;
+                right: -5px;
+                top: 78px;
+                transition: var(--tran);
+                visibility: hidden;
+                display: none;
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+                li {
+                    font-family: pb;
+                    font-size: 16px;
+                    padding: 3px 9px 9px 8px;
+                    background: var(--cl-grey);
+                    transition: var(--tran);
+                }
+                a:hover {
+                    color: var(--cl-hover-tan);
+                }
+                li:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+        &-botton {
+            width: 20px;
+            height: 2px;
+            margin-left: 10px;
+            display: none;
+            cursor: pointer;
+            &.active {
+                &:before {
+                    transform: rotate(45deg) translate(-1px, 0px);
+                    transition: var(--tran);
+                }
+                span {
+                    opacity: 0;
+                    transition: var(--tran);
+                }
+                &:after {
+                    transform: rotate(-45deg) translate(3px, -4px);
+                    transition: var(--tran);
+                }
+            }
+            &:before {
+                content: "";
+                display: block;
+                width: 20px;
+                height: 2px;
+                background: white;
+                margin-bottom: -6px;
+                transform: rotate(0deg) translate(0px, 0px);
+            }
+            span {
+                content: "";
+                display: block;
+                width: 20px;
+                height: 2px;
+                background: white;
+                opacity: 1;
+            }
+            &:after {
+                content: "";
+                display: block;
+                background: white;
+                width: 20px;
+                height: 2px;
+                margin-top: 6px;
+                transform: rotate(0deg) translate(0px, 0px);
+            }
+        }
+    }
+}
+
+@include sm {
+    .header {
+        .header__menu {
+            display: none;
+        }
+        .header__right {
+            &-botton {
+                display: block;
+            }
+        }
+    }
+}
+
+@include xxs {
+    .header {
+        height: 60px;
+        .container-fluid {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+}

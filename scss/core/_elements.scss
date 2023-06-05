@@ -1,0 +1,40 @@
+.btnmore {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    transition: var(--tran);
+    a:after {
+        content: "";
+        display: block;
+        border-top: 2px solid var(--cl-tan);
+        width: 37px;
+        position: absolute;
+        top: 120%;
+    }
+    a {
+        text-decoration: none;
+        color: var(--cl-grey-text);
+        font-size: 14px;
+        font-family: pb;
+        padding-right: 10px;
+    }
+    img {
+        position: relative;
+        transform: translateX(0px);
+        transition: var(--tran);
+    }
+    &:hover {
+        transform: translateX(4px);
+        transition: var(--tran);
+        opacity: 0.4;
+    }
+}
+
+@include xxs {
+    .btnmore {
+        a {
+            font-size: 16px !important;
+        }
+    }
+}

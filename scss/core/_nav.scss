@@ -1,0 +1,38 @@
+.nav {
+    width: 100vw;
+    height: 100vh;
+    background: #161616;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    transition: (--tran);
+    &.active {
+        opacity: 1;
+        pointer-events: auto;
+
+        transition: var(--tran);
+    }
+    ul {
+        flex-direction: column;
+        display: flex;
+        li {
+            margin: 15px auto;
+            a {
+                color: white;
+                text-decoration: none;
+                transition: 0.4s;
+                font-family: pb;
+                font-size: 15px;
+                align-items: center;
+                height: 100%;
+                display: flex;
+            }
+        }
+    }
+}

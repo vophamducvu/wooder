@@ -1,0 +1,30 @@
+//large desktop
+@mixin lg {
+    @media screen and (max-width: $lg-max) {
+        @content;
+    }
+}
+//dektop
+@mixin md {
+    @media screen and (max-width: $md-max) {
+        @content;
+    }
+}
+//tablet
+@mixin sm {
+    @media screen and (max-width: $sm-max) {
+        @content;
+    }
+}
+//mobile
+@mixin xs {
+    @media screen and (max-width: $xs-max) {
+        @content;
+    }
+}
+
+@mixin xxs {
+    @media screen and (max-width: $xxs-max) {
+        @content;
+    }
+}
